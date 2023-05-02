@@ -36,6 +36,14 @@ inputs:
     required: false
     default: ''
 
+  folderone: 
+    description: 'Mount folder one'
+    required: false
+
+  foldertwo: 
+    description: 'Mount folder two'
+    required: false   
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -46,3 +54,5 @@ runs:
     - ${{ inputs.mongodb-db }}
     - ${{ inputs.mongodb-username }}
     - ${{ inputs.mongodb-password }}
+    - ${{ inputs.folderone }}
+    - ${{ inputs.foldertwo }}

@@ -12,3 +12,7 @@ inputs:
     type: string
   mongodb-password:
     type: string
+  folderone: 
+    type: string
+  foldertwo:
+    type: string  
