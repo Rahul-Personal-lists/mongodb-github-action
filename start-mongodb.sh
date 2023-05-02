@@ -46,7 +46,7 @@ if [ -z "$MONGODB_REPLICA_SET" ]; then
   echo "  - credentials [$MONGODB_USERNAME:$MONGODB_PASSWORD]"
   echo ""
 
-  docker run --name mongo --publish $MONGODB_PORT:27017 -e MONGO_INITDB_DATABASE=$MONGODB_DB -e MONGO_INITDB_ROOT_USERNAME=$MONGODB_USERNAME -e MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD -v $FOLDER_ONE:/python/app -v $FOLDER_TWO:/data/db --detach mongo:$MONGODB_VERSION
+  docker run --name mongo --publish $MONGODB_PORT:27017 -e MONGO_INITDB_DATABASE=$MONGODB_DB -e MONGO_INITDB_ROOT_USERNAME=$MONGODB_USERNAME -e MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD -v $WORK_DIR:/python/app --detach mongo:$MONGODB_VERSION
 
   if [ $? -ne 0 ]; then
       echo "Error starting MongoDB Docker container"
