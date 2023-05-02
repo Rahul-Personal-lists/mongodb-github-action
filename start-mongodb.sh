@@ -10,6 +10,9 @@ MONGODB_PASSWORD=$6
 FOLDER_ONE=$7
 FOLDER_TWO=$8
 
+echo "dir"
+echo ls
+echo pwd
 
 if [ -z "$MONGODB_VERSION" ]; then
   echo ""
