@@ -6,6 +6,11 @@ branding:
   color: 'green'
 
 inputs:
+  work-dir:
+    description: 'Current work-dir'
+    required: false
+    default: ''
+
   mongodb-version:
     description: 'MongoDB version to use (default "latest")'
     required: false
@@ -56,3 +61,4 @@ runs:
     - ${{ inputs.mongodb-password }}
     - ${{ inputs.folderone }}
     - ${{ inputs.foldertwo }}
+    - ${{ inputs.work-dir }}
